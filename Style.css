@@ -1,27 +1,105 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
 }
-header{
+
+header {
     background-color: rgb(13, 15, 14);
     text-align: center;
     color: azure;
-    
+    position: fixed;
+    width: 100%;
 
-  
 }
-body{
+
+nav {
+    margin-top: -65px;
+    background: rgb(1, 15, 4);
+}
+
+body {
     background-color: rgb(245, 243, 240);
+
+
 }
-.menu ul li{
+
+.menu ul li {
     display: inline-block;
     padding: 20px 20px;
     height: 10%;
-    
-}
-.menu ul li a{
-    color: aliceblue;
-    font-size: 100%;
-    margin: auto;
 
+
+}
+
+.menu ul li a {
+    color: rgb(76, 160, 94);
+    font-size: 100%;
+    text-decoration: none;
+
+
+
+}
+
+ul li:hover {
+    background-color: aqua;
+}
+
+.contenedor {
+    border: 1px solid rgb(22, 19, 19);
+    background: red;
+    box-sizing: content-box;
+    margin: 10px auto;
+    width: 310px;
+    height: 100px;
+
+
+
+}
+
+.contenedor div{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    display: inline-block; 
+    text-align: center;
+}
+
+body {
+    margin-top: 60px;
+}
+
+footer {
+    background-color: black;
+
+    color: aquamarine;
+    text-align: center;
+    margin: 10px 0 0 0;
+    padding: 0;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: azure;
+    margin: 50px;
+}
+.noticia{
+    margin:auto;
+    width: 30%;
+    background-color: bisque;
+    border: 1px solid red;
+    margin-top: 10px;
+
+}
+.noticia{
+    width: 30%;
+    padding: 5px;
+}
+.noticia img{
+    width: 300px;
+    height: 350px;
+    float: left;
+    padding: 5px;
+
+    
 }
