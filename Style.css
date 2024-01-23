@@ -9,57 +9,91 @@ header {
     background-color: rgb(13, 15, 14);
     text-align: center;
     color: azure;
-    position: fixed;
     width: 100%;
+    
 
 }
 
 nav {
-    margin-top: -65px;
+
     background: rgb(1, 15, 4);
+    position: fixed;
+    width: 100%;
+    margin-top: -90px; 
+    display: flex;
+    
 }
 
 body {
-    background-color: rgb(245, 243, 240);
+    background-color: rgb(113, 122, 165);
 
 
 }
 
-.menu ul li {
-    display: inline-flex;
-    padding: 20px 20px;
-    height: 10%;
+.menu_horizontal {
+    
+    color: aqua;
     list-style: none;
-
+    margin:  auto;
+ 
 }
 
-.menu ul li a {
-    color: rgb(76, 160, 94);
-    font-size: 100%;
+.menu_horizontal li {
+
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    margin: auto ;
+    align-items: center;
+
+    
+
+}
+.menu_horizontal li a{
+    text-align: center;
     text-decoration: none;
-    list-style: none;
-
-
+    color: aliceblue;
+    font-size: 25px;
+    margin: 25px;
+    display: flex;
+    justify-content: space-around;
 
 }
 
 .menu_vertical {
+    background-color: rgb(1, 15, 4, 0.8);
+
     display: none;
+    list-style: none;
     position: absolute;
 
+}
+.menu_vertical li{
+    padding-left: 10px;
+    width: 100%;
+}
+.menu_vertical li a{
+
+    color: aliceblue;
+}
+
+.menu_horizontal li:hover{
+
+    background-color: rgb(255, 0, 76);
+    transition: all 0.6s;
 
 }
 
-ul li:hover .menu_vertical {
-    background-color: aqua;
-    display: flow-root;
-
+.menu_horizontal li:hover .menu_vertical{
+    display: grid;
+    
 }
-.menu_vertical {
-
-    opacity: 0.6;
+.fa-solid fa-house{
+    box-sizing: border-box;
+    display: flex;
+    width: 100px;
+    height: 1000px;
 }
-
 
 .contenedor {
     border: 1px solid rgb(22, 19, 19);
@@ -81,9 +115,6 @@ ul li:hover .menu_vertical {
     text-align: center;
 }
 
-body {
-    margin-top: 60px;
-}
 
 footer {
     background-color: black;
@@ -106,7 +137,8 @@ footer a {
     width: 30%;
     background-color: bisque;
     border: 1px solid red;
-    margin-top: 10px;
+    margin-top: 90px;
+
 
 }
 
