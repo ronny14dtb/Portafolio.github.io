@@ -6,22 +6,22 @@
 }
 
 header {
-    background-color: rgb(13, 15, 14);
+    background-color: rgb(13, 15, 14, .8);
     text-align: center;
     color: azure;
     width: 100%;
-    
+
 
 }
 
 nav {
 
-    background: rgb(1, 15, 4);
+    background: rgb(1, 15, 4, .8);
     position: fixed;
     width: 100%;
-    margin-top: -90px; 
+    margin-top: -90px;
     display: flex;
-    
+
 }
 
 body {
@@ -31,11 +31,11 @@ body {
 }
 
 .menu_horizontal {
-    
+
     color: aqua;
     list-style: none;
-    margin:  auto;
- 
+    margin: auto;
+
 }
 
 .menu_horizontal li {
@@ -43,13 +43,14 @@ body {
     display: inline-block;
     height: 100%;
     width: auto;
-    margin: auto ;
+    margin: auto;
     align-items: center;
 
-    
+
 
 }
-.menu_horizontal li a{
+
+.menu_horizontal li a {
     text-align: center;
     text-decoration: none;
     color: aliceblue;
@@ -68,27 +69,30 @@ body {
     position: absolute;
 
 }
-.menu_vertical li{
+
+.menu_vertical li {
     padding-left: 10px;
     width: 100%;
 }
-.menu_vertical li a{
+
+.menu_vertical li a {
 
     color: aliceblue;
 }
 
-.menu_horizontal li:hover{
+.menu_horizontal li:hover {
 
     background-color: rgb(255, 0, 76);
     transition: all 0.6s;
 
 }
 
-.menu_horizontal li:hover .menu_vertical{
+.menu_horizontal li:hover .menu_vertical {
     display: grid;
-    
+
 }
-.fa-solid fa-house{
+
+.fa-solid fa-house {
     box-sizing: border-box;
     display: flex;
     width: 100px;
@@ -146,6 +150,7 @@ footer a {
     width: 30%;
     padding: 5px;
     font-family: sans-serif;
+    margin-bottom: 10px;
 }
 
 .noticia img {
@@ -153,6 +158,8 @@ footer a {
     height: 350px;
     float: left;
     padding: 5px;
+    border-radius: 100px;
+    object-fit: cover;
 
 
 }
@@ -161,9 +168,69 @@ footer a {
     display: none;
 }
 
+.galeria_album_contenedor {
+
+    background-color: rgb(51, 53, 51, .4);
+    
+    margin: 10px;
+    border-radius: 80px;
+    max-width: 1800px;
+    margin: auto
+}
+
+
+.galeria_album {
+
+    display: grid;
+   
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    object-fit: contain;
+    justify-items: center;
+    justify-content: center;
+    align-content: start;
+    grid-gap: 2px;
+    grid-auto-flow: dense;
+    place-self: center;
+    box-sizing: content-box;
+    overflow: hidden;
+
+
+}
+
+.galeria_album img {
+    object-fit: contain;
+    max-width: 400px;
+    max-height: 500px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+
+    
+}
+.galeria_album img:hover{
+
+  
+    max-width: 500px;
+    max-height: 650px;
+    transition: all 1s;
+    object-fit: contain;
+    box-sizing: content-box;
+
+}
+
+
+
+.titulo {
+    text-align: center;
+    color: aliceblue;
+    font-size: 100px;
+}
+
+
 @media only screen and (max-width: 700px) {
 
-    .menu_nr {
+    .menu_horizontal {
         display: none;
     }
 
