@@ -27,7 +27,7 @@ nav {
 }
 
 body {
-    background-color: rgb(113, 122, 165);
+    background-color: rgb(73, 87, 151);
 
 
 }
@@ -166,9 +166,44 @@ footer a {
     padding: 5px;
     border-radius: 100px;
     object-fit: cover;
+    animation: all 1s;
+    opacity: 0.6;
+    animation: animacion backwards 1s 2;
+
 
 
 }
+.noticia img:hover{
+    
+    top: 10px;
+    padding: 30px;
+    width: 350px;
+    height: 400px;   
+    background-color: rgb(198, 224, 149, 0.6);
+    transform: (deg 306);
+    animation:  1s;
+    transition: all 1s;
+    opacity: 1;
+    border: 2px solid rgb(35, 77, 18);
+    margin: auto;
+    
+
+    
+    
+}
+
+.noticia img:active{
+
+    animation-direction: alternate-reverse;
+    top: 10px;
+    padding: 40px;
+    width: 450px;
+    height: 500px;  
+
+}
+
+
+
 
 #menu_r {
     display: none;
@@ -242,4 +277,20 @@ footer a {
         display: block;
     }
 
+}
+@keyframes animacion{
+    0%{
+        top: 10px;
+        padding-left: 200px;
+    }
+    50%{
+        top: 40px;
+        padding-left: 400px;
+
+
+    }
+    100%{
+        padding-left: 800px;
+
+    }
 }
