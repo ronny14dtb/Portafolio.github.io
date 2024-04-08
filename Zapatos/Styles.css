@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ header{
+    
+
+    list-style: none;
+    background-color: rgb(221, 223, 202);
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+
+    
+ }
+ .separadores{
+    text-align: center;
+    color: #000000;
+    font-size: 40px;
+    line-height: 20%;
+ }
+
+ .Menu-horizontal{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin: auto;
+    box-sizing: content-box;
+
+ }
+ .Menu-horizontal li{
+    padding: 10px;
+    margin: 10px;
+    
+ }
+
+.Menu-horizontal li:hover{
+    background-color: antiquewhite;
+
+}
+ .Menu-horizontal li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    box-sizing: 100%;
+ }
+
+ .Menu-horizontal li{
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    box-sizing: 100%;
+    width: 100%;
+    height: 100%;
+    
+ }
+ .accesos i{
+    padding: 10px;
+ }
+
+
+
+
+
+
+.Carrousel img{
+    object-fit: fill;
+    align-items: center;
+    width: 10000px;
+}
+
+
+ .carrousel{
+    padding-top: 20px;
+}
+
+.conteCarrousel{
+    width: 95%;
+    height: 600px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+#itemCarrousel-1{
+    background-image: url(https://i.pinimg.com/564x/f2/58/05/f2580568d95bfa827278c0e6c63d4d2b.jpg);
+    object-fit: contain;
+    align-items: center;
+    align-content: center;
+
+}
+    
+
+#itemCarrousel-2{
+    background-image: url(https://i.pinimg.com/564x/f2/58/05/f2580568d95bfa827278c0e6c63d4d2b.jpg);
+}
+
+#itemCarrousel-3{
+    background-image: url("https://i.pinimg.com/564x/10/71/ef/1071ef070e48090d5a3de0b9529a1f11.jpg");
+}
+#itemCarrousel-4{
+    background-image: url(https://i.pinimg.com/564x/f2/58/05/f2580568d95bfa827278c0e6c63d4d2b.jpg);
+}
+
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+    color: white;
+}
+
+
+.cartas{
+    padding: 10px;
+    margin: 20px;
+    background-color: antiquewhite;
+    
+}
+.cartas .titulo{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;
+}
+ /* 
+@media screen and (min-width: 900px) {
+*{
+    display: grid;
+    grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
+    grid-template-columns:  repeat(3,1fr);
+}
+
+header{
+    grid-column: 1 / span 3;
+
+}
+
+main{
+    grid-row: 2 / 6;
+    grid-column: 1 / span 2;
+
+
+}
+aside{
+    grid-row: 2 / 6;
+
+}
+footer{
+
+    grid-row: 6 / 7;
+    grid-column: 1 / span 3;
+
+}
+    
+}
+*/
