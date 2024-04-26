@@ -29,7 +29,7 @@ html{
 .contenedor-header header .logo a{
     font-family: 'Righteous';
     font-size: 36px;
-    color: #1CB698;
+    color: #18c0d6;
     text-decoration: none;
 }
 .contenedor-header header ul{
@@ -45,10 +45,10 @@ html{
     text-decoration: none;
 }
 .contenedor-header header nav ul li a:hover{
-    color: #1CB698;
+    color: #18c0d6;
 }
 .nav-responsive{
-    background-color: #1CB698;
+    background-color: #18c0d6;
     color:#fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -75,7 +75,7 @@ html{
 }
 .inicio .contenido-banner img{
     margin-top: 40px;
-    border: 10px solid #1CB698;
+    border: 10px solid #18c0d6;
     display: block;
     width: 80%;
     margin: auto;
@@ -104,7 +104,7 @@ html{
     transition: .3s;
 }
 .inicio .contenido-banner .redes a:hover{
-    background-color: #1CB698;
+    background-color: #18c0d6;
 }
 .sobremi{
     background-color: #1e2326;
@@ -127,9 +127,37 @@ html{
     line-height: 22px;
     margin-bottom: 20px;
 }
+.sobremi .contenido-seccion .CV a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+    border: #18c0d6 3px solid;
+    background-color: #1e2326;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .sobremi .contenido-seccion p span{
     color: #1CB698;
     font-weight: bold;
+}
+.sobremi .fila a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+
 }
 .sobremi .fila{
     display: flex;
@@ -183,8 +211,7 @@ html{
     margin-bottom: 10px;
 }
 .sobremi button{
-    cursor: pointer;
-    background-color: transparent;
+    
     border: 2px solid #fff;
     width: fit-content;
     display: block;
@@ -192,10 +219,9 @@ html{
     padding: 10px 22px;
     font-size: 16px;
     color: #fff;
-    position: relative;
-    z-index: 10;
+    
 }
-.sobremi button .overlay{
+.sobremi .contenido-seccion .cv .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -205,7 +231,7 @@ html{
     z-index: -1;
     transition: 1s;
 }
-.sobremi button:hover .overlay{
+.sobremi .contenido-seccion .CV:hover .overlay{
     width: 100%;
 }
 /* SECCION S K I L L S */
@@ -355,6 +381,30 @@ html{
     animation: 2s proyect forwards;
 }
 @keyframes proyect {
+    0%{width: 0%;}
+    100%{width: 94%;}
+}
+.skills .skill .Implementación{
+    width: 0%;
+    animation: 2s Implementación forwards;
+}
+@keyframes Implementación {
+    0%{width: 0%;}
+    100%{width: 94%;}
+}
+.skills .skill .Implementación{
+    width: 0%;
+    animation: 2s Implementación forwards;
+}
+@keyframes Implementación {
+    0%{width: 0%;}
+    100%{width: 94%;}
+}
+.skills .skill .Implementación{
+    width: 0%;
+    animation: 2s Implementación forwards;
+}
+@keyframes Implementación {
     0%{width: 0%;}
     100%{width: 94%;}
 }
