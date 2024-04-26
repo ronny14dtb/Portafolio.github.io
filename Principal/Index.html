@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="icon" href="IMG/Logo.ico">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Ronny</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="IMG/Foto.jpg" alt="">
+            </div>
+            <h1>Ronny Torres</h1>
+            <h2>Desarrollador de Software</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/dario.arauz.35"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ronnydario8/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Ronny Darío Torres Barrios.</span>Soy un desarrollador junior el cuale ha aprovechado a
+                lo largo de sus estudios aprende diversos lenguajes para enfocarse tanto en temas de desarrollo web como
+                en aplicaciones de escritorio como proyectos dónde se alcanzó innovar gracias a las herramientas
+                mostradas con los conocimientos otorgados, como desarrollador web he disfrutado tanto de aprender
+                front-end como back-end. He realizado proyectos ya sea para estudios como para amigos dónde aprovecho y
+                estudio lo máximo posible.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            25-06-2002
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +57 304 550 5288
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            ronnydario8@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            https://calzap.000webhostapp.com/
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Cra 72 #51 sur - 7
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button>
+                Descargar CV <i class="fa-solid fa-download"><a download="CV" href="IMG/Cisco 1.jpg"></a></i>
+                
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>92%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Diseño y Edición</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Wordpress</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>81%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>PHP</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>java</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyect Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>94%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Implementación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>76%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Bachiller técnico en sistemas</h4>
+                        <span class="casa">Politécnico Jaime isaza cadavid</span>
+                        <span class="fecha">2018 - 2020</span>
+                        <p>Se adquirieron conocimientos ya sea enfocados en web como en desarrollo de aplicaciones con el uso de Java dónde se implementaron programos en soluciones
+                            ya se de diseño o de conocimientos para la institución
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Tecnología en sistemas</h4>
+                        <span class="casa">Universidad de Oxford</span>
+                        <span class="fecha">2021 - 2024</span>
+                        <p>Se especificaron y ampliaro conocimientos enfocados en el desarrollo lógico e implementaciones de conocimientos redes llegando a conocer y manipular herramientas
+                            como CISCO dónde también se hizo uso tanto de conexiones a nivel general como crear una empresa totalmente conectada, videjuegos hechos en python y desarrollo de estrategias para emprender
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Desarrollo Full Stack</h4>
+                        <span class="casa">Platzi</span>
+                        <span class="fecha">2021 - 2023</span>
+                        <p>En busca de ampliar el conocimiento me dediqué de lleno a estudiar cursos online para poder crear mis propias páginas sin abandonar mis desarrollos en escritorio</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Asesor comercial</h4>
+                        <span class="casa">Emtelco</span>
+                        <span class="fecha">2020 - 2021</span>
+                        <p>Mi primera Experiencia laboral en dónde me fui formando como persona y dónde empecé a implementar mejores herramientas de trabajo gracias a mis conocmientos para ayudarme en los procesos y continuar con una gestión más ágil</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Front Developer</h4>
+                        <span class="casa">FREELANCE</span>
+                        <span class="fecha">2023 - 2024</span>
+                        <p>Desarrollo de una página para zapatos dónde aprovecho al máximo cada esfuerzo realizado y empiezo a vender mi imagen como programdor por lo cual pruebo con herramientas como Git y VS</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Front Developer</h4>
+                        <span class="casa">FREELANCE</span>
+                        <span class="fecha">2024</span>
+                        <p>Desarrollo de movimientos para un prototipo dónde se utilizaron conocimientos previos en C#, java y manejo del aplicativo de Unity</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="IMG/Dark.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Artes</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="IMG/Logo.jpeg" alt="">
+                    <div class="overlay">
+                        <h3>E-COMERCE</h3>
+                        <p>WEB</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="IMG/Cisco 1.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Desarrollo De Redes</h3>
+                        <p>CISCO</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="IMG/Ilustracion 1.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Artes</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="IMG/Cisco 2.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Desarrollo De Redes</h3>
+                        <p>Cisco</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="IMG/Unity.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Desarrollo De Juegos</h3>
+                        <p>Unity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    
+                </div>
+                <br>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Medellín, San antonio de prado
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Contactame: 3045505288
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: ronnydario8@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/dario.arauz.35"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ronnydario8/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ronny-dario-85249b1b4/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <script src="Index.js"></script>
+</body>
+
+</html>

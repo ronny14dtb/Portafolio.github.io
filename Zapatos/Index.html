@@ -6,24 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css" type="text/css">
     <script src="https://kit.fontawesome.com/e6ee80ecd2.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="icon" href="images/Logo-png.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script defer src="js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>TendenciaScooby</title>
 </head>
 
 <header>
-    <div class="logo"><i class="fa-solid fa-socks"></i></div>
-    <div class="separadores">|</div>
+    <div class="logo"><img src="images/Logo-png.png"></div>
+    <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
     <nav>
         <div class="Menu">
             <ul class="Menu-horizontal">
-                <li><a href="#">Hombres</a></li>
-                <li><a href="#">Mujeres</a></li>
-                <li><a href="#">Niños</a></li>
-                <li><a href="#">Niñas</a></li>
-                <li><a href="#">Destacados</a></li>
+                <li> <a href="#">Hombres</a>
+                    <ul class="menu_vertical">
+                        <li> <a href="">Botas </a></li>
+                        <li> <a href="">Deportivos </a></li>
+                        <li> <a href="">Formales </a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Mujeres</a>
+                    <ul class="menu_vertical">
+                        <li> <a href="">Botas </a></li>
+                        <li> <a href="">Deportivos </a></li>
+                        <li> <a href="">Formales </a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Destacados</a>
+                    <ul class="menu_vertical">
+                        <li> <a href="">Botas </a></li>
+                        <li> <a href="">Deportivos </a></li>
+                        <li> <a href="">Formales </a></li>
+
+                    </ul>
+                </li>
             </ul>
+        </div>
     </nav>
-    </div>
-    <div class="separadores">|</div>
     <div class="accesos">
         <i class="fa-solid fa-house"></i>
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -35,80 +66,343 @@
 
 <body>
     <main>
-        <div class="carrousel">
-            <div class="conteCarrousel">
-                <div class="itemCarrousel" id="itemCarrousel-1">
-                    <div class="itemCarrouselTarjeta">
-                    </div>
-                    <div class="itemCarrouselArrows">
-                        <a href="#itemCarrousel-3">
-                            <i class="fas fa-chevron-left"></i>
-                        </a>
-                        
-                        <a href="#itemCarrousel-2">
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="itemCarrousel" id="itemCarrousel-2">
-                    <div class="itemCarrouselTarjeta">B</div>
-                    <div class="itemCarrouselArrows">
-                        <a href="#itemCarrousel-1">
-                            <i class="fas fa-chevron-left"></i>
-                        </a>
-                        <a href="#itemCarrousel-3">
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="itemCarrousel" id="itemCarrousel-3">
-                    <div class="itemCarrouselTarjeta">C</div>
-                    <div class="itemCarrouselArrows">
-                        <a href="#itemCarrousel-2">
-                            <i class="fas fa-chevron-left"></i>
-                        </a>
-                        <a href="#itemCarrousel-1">
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="itemCarrousel" id="itemCarrousel-4">
-                    <div class="itemCarrouselTarjeta">C</div>
-                    <div class="itemCarrouselArrows">
-                        <a href="#itemCarrousel-3">
-                            <i class="fas fa-chevron-left"></i>
-                        </a>
-                        <a href="#itemCarrousel-1">
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/3.jpeg" style="width:100%">
             </div>
-            <div class="conteCarrouselController">
-                <a href="#itemCarrousel-1">•</a>
-                <a href="#itemCarrousel-2">•</a>
-                <a href="#itemCarrousel-3">•</a>
-                <a href="#itemCarrousel-4">•</a>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/4.jpeg" style="width:100%">
             </div>
+            <div class="mySlide.jpeg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <script src="app.js"></script>
+
 
     </main>
     <aside>
-        <div class="cartas">
-            <div class="titulo">NOVEDADES</div>
-            <div><img src="https://i.pinimg.com/564x/fc/17/ed/fc17ed1ee5671a3583ab69d1f9c69e5d.jpg" alt=""></div>
-            <div><img src="https://i.pinimg.com/564x/fc/17/ed/fc17ed1ee5671a3583ab69d1f9c69e5d.jpg" alt=""></div>
-            <div><img src="https://i.pinimg.com/564x/fc/17/ed/fc17ed1ee5671a3583ab69d1f9c69e5d.jpg" alt=""></div>
-        
-        
+
+
+        <div class="Titulo_main">
+            <h1>CONOCE NUESTRAS MEJORES OFERTAS</h1>
+        </div>
+        <div class="container">
+            <div class="slider-wrapper">
+                <button id="prev-slide" class="slide-button material-symbols-rounded">
+                    chevron_left
+                </button>
+                <ul class="image-list">
+                    <img class="image-item" src="images/1.jpeg" alt="" />
+                    <img class="image-item" src="images/2.jpeg" alt="" />
+                    <img class="image-item" src="images/3.jpeg" alt="" />
+                    <img class="image-item" src="images/4.jpeg" alt="" />
+                    <img class="image-item" src="images/6.jpeg" alt="" />
+                    <img class="image-item" src="images/7.jpeg" alt="" />
+                    <img class="image-item" src="images/8.jpeg" alt="" />
+                    <img class="image-item" src="images/9.jpeg" alt="" />
+                    <img class="image-item" src="images/10.jpeg" alt="" />
+                    <img class="image-item" src="images/11.jpeg" alt="" />
+                </ul>
+                <button id="next-slide" class="slide-button material-symbols-rounded">
+                    chevron_right
+                </button>
+            </div>
+            <div class="slider-scrollbar">
+                <div class="scrollbar-track">
+                    <div class="scrollbar-thumb"></div>
+                </div>
+            </div>
         </div>
 
+
+        <div class="Main_productos">
+            <div class="Titulo_main">
+                <h1>PRODUCTOS DESTACABLES</h1>
+            </div>
+            <div class="Main_cartas">
+                <div class="card" style="--i:url('images/1.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/2.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/3.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/4.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/5.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <div class="card" style="--i:url('images/6.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/7.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/8.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/8.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/9.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/10.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/11.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/12.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/13.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/14.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/15.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/16.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/17.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/18.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/19.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/20.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/20.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/21.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/22.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/23.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/24.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/25.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/26.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/27.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/28.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/29.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/30.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/31.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/32.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/33.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/34.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/35.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="card" style="--i:url('images/36.jpeg')">
+                    <div class="content">
+                        <h2>Calzado</h2>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
     </aside>
 
 
 </body>
-<footer>
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<script defer src="js/app.js"></script>
 
+
+
+
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="images/Logo-png.png" alt="Logo de SLee Dw">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Tienda de zapatos ubicada en medellín con acceso a todo tipo de ofertas</p>
+            <p>Para más información contáctanos al: +57 304 6675606</p>
+        </div>
+        <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2024 <b>TendenciaScooby</b> - Todos los Derechos Reservados.</small>
+    </div>
 </footer>
 
 </html>
