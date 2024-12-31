@@ -23,6 +23,80 @@ a:hover{
 /* Header section */
 
 
+/* Carta sección */
+
+.parte2 .texto-p {
+
+    text-align: center;
+    padding: 40px 0 60px;
+    background-color: #411280;
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    margin-bottom: 40px;
+
+}
+
+.carta-amor {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #f9e4d4; /* Color pastel claro */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carta-amor .texto h1 {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    color: #8b008b; /* Morado */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    
+}
+
+.carta-amor p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #4a4a4a; /* Gris oscuro */
+    margin-bottom: 15px;
+}
+
+.carta-amor p:first-of-type {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.carta-amor p:last-of-type {
+    font-style: italic;
+    text-align: center;
+}
+
+.carta-amor p span {
+    color: #8b008b; /* Resaltar palabras clave */
+    font-weight: bold;
+}
+
+.carta-amor a {
+    color: #ff4500; /* Enlaces naranjas */
+    text-decoration: none;
+}
+
+.carta-amor a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* carousel */
 .parte1{
@@ -104,6 +178,7 @@ a:hover{
     border-radius: 20px;
     width: 100%;
     height: 100%;
+    outline: 3px solid #a30a70cb;
 }
 
 .carousel .list .item:nth-child(3){
