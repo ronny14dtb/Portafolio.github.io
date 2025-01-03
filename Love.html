@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="parte2">
+    <div class="parte2" id="parte2">
         <div class="texto-p">
             <h1>MI CIELO ENTERO</h1>
         </div>
@@ -230,13 +230,21 @@
     </div>
 
     <div class="avance">
-        <button id="avanzar" onclick="Siguiente();">SIGUIENTE</button>
-        <button id="anterior" onclick="Anterior();">ANTERIOR</button>
-        <audio id="audio" autoplay controls loop src="Archivos/Imágenes/Fondo.mp3"></audio>
-
+        <button id="anterior" onclick="cambiarSeccion(-1)">Anterior</button>
+        <button id="avanzar" onclick="cambiarSeccion(1)">Avanzar</button>
 
     </div>
 
+
+
+    <div class="sticky-audio-player">
+        <button id="play-pause-btn" onclick="toggleAudio()">▶️</button>
+        <audio id="audio" src="Archivos/Imágenes/Fondo.mp3"></audio>
+    </div>
+    
+    
+    
+    
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src="app.js"></script>
 

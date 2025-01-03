@@ -42,24 +42,23 @@ $( document ).ready(function() {
 
 // botones de avanzar y retroceder
 
-function Siguiente(){
-    document.getElementById("parte1").style.display = "block";
-    document.getElementById("anterior").style.display = "block";
+let secciones = ["parte1", "parte2", "carta"]; // IDs de las secciones
+let indiceActual = 0; // Empezamos en la primera sección (parte1)
+document.getElementById(secciones[indiceActual]).style.display = "block";
 
-    document.getElementById("carta").style.display = "none";
-    document.getElementById("avanzar").style.display = "none";
+function cambiarSeccion(direccion) {
+    // Ocultar la sección actual
+    document.getElementById(secciones[indiceActual]).style.display = "none";
 
+    // Actualizar el índice
+    indiceActual += direccion;
 
-}
+    // Si nos salimos del rango, regresamos al extremo opuesto
+    if (indiceActual < 0) indiceActual = secciones.length - 1;
+    if (indiceActual >= secciones.length) indiceActual = 0;
 
-function Anterior(){
-    document.getElementById("parte1").style.display = "none";
-    document.getElementById("anterior").style.display = "none";
-
-    document.getElementById("carta").style.display = "block";
-    document.getElementById("avanzar").style.display = "block";
-
-
+    // Mostrar la nueva sección
+    document.getElementById(secciones[indiceActual]).style.display = "block";
 }
 
 
@@ -127,3 +126,21 @@ function showSlider(type) {
 
 // Start the initial animation 
 resetTimeAnimation()
+
+
+
+// Audio
+
+let audio = document.getElementById("audio");
+let playPauseBtn = document.getElementById("play-pause-btn");
+
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.innerHTML = "⏹️"; // Cambia el icono a stop
+    } else {
+        audio.pause();
+        audio.currentTime = 0; // Reinicia el audio
+        playPauseBtn.innerHTML = "▶️"; // Cambia el icono a play
+    }
+}
