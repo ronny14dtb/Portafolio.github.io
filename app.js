@@ -1,3 +1,33 @@
+// Audio
+window.onload = function () {
+    const audio = document.getElementById('audio');
+    const toggleButton = document.getElementById('toggleAudio');
+    let isPlaying = false;
+
+    toggleButton.addEventListener('click', function () {
+        if (isPlaying) {
+            audio.pause();
+            toggleButton.textContent = '🔊';
+        } else {
+            audio.play();
+            toggleButton.textContent = '🔇';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    audio.onended = function () {
+        toggleButton.textContent = '🔊';
+        isPlaying = false;
+    };
+};
+
+
+
+
+
+
+
+
 //Carta con corazones
 
 let next = document.querySelector('.next')
@@ -42,7 +72,7 @@ $( document ).ready(function() {
 
 // botones de avanzar y retroceder
 
-let secciones = ["parte1", "parte2", "carta"]; // IDs de las secciones
+let secciones = ["parte2", "parte1", "carta"]; // IDs de las secciones
 let indiceActual = 0; // Empezamos en la primera sección (parte1)
 document.getElementById(secciones[indiceActual]).style.display = "block";
 
@@ -129,18 +159,3 @@ resetTimeAnimation()
 
 
 
-// Audio
-
-let audio = document.getElementById("audio");
-let playPauseBtn = document.getElementById("play-pause-btn");
-
-function toggleAudio() {
-    if (audio.paused) {
-        audio.play();
-        playPauseBtn.innerHTML = "⏹️"; // Cambia el icono a stop
-    } else {
-        audio.pause();
-        audio.currentTime = 0; // Reinicia el audio
-        playPauseBtn.innerHTML = "▶️"; // Cambia el icono a play
-    }
-}

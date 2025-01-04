@@ -1,3 +1,16 @@
-body{
-    background-color: rgb(200, 241, 241);
+#toggleAudio {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#toggleAudio:hover {
+    background-color: #45a049;
 }
