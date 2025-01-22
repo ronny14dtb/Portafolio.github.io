@@ -1,3 +1,28 @@
+//cartas
+document.querySelectorAll('.card').forEach((card) => {
+    card.addEventListener('click', function () {
+        const modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'flex';
+    });
+});
+
+document.querySelectorAll('.close').forEach((closeBtn) => {
+    closeBtn.addEventListener('click', function () {
+        this.closest('.modal').style.display = 'none';
+    });
+});
+
+window.addEventListener('click', function (event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+});
+
+
+
+
+
+
 // Audio
 window.onload = function () {
     const audio = document.getElementById('audio');
@@ -20,10 +45,6 @@ window.onload = function () {
         isPlaying = false;
     };
 };
-
-
-
-
 
 
 
