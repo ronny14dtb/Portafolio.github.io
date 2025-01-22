@@ -199,7 +199,23 @@ a:hover {
 
 
 
+@media (max-width: 768px) {
+    .modal-content {
+        font-size: 14px; /* Reduce el tamaño del texto */
+        padding: 10px; /* Ajusta los márgenes internos */
+        border-radius: 10px;
+        width: 98%; /* Ajusta el ancho */
+        overflow: scroll;
+        max-height: 100vh;
+    }
 
+    .modal {
+        width: 100%; /* Asegúrate de que las imágenes no se salgan */
+        height: auto; /* Mantén las proporciones */
+        border-radius: 20px;
+    }
+
+}
 
 
 
