@@ -206,7 +206,9 @@ a:hover {
         border-radius: 10px;
         width: 98%; /* Ajusta el ancho */
         overflow: scroll;
-        max-height: 100vh;
+        max-height: 98vh;
+        padding-bottom: 10px;
+        top: -15px;
     }
 
     .modal {
