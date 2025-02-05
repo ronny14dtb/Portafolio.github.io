@@ -299,6 +299,8 @@ document.write(cantidadDeClases("pepito"));
 
 */
 
+
+/*
 // Ejercicio 5 cofla necesita saber si es posible inscribirse en una clase pero si ya hay mas de 20 no dejaría
 
 
@@ -397,3 +399,116 @@ document.write(`<br>Materias después de inscripciones:<br>
     Química: ${materias.quimica.join(", ")}<br>`);
 
 
+*/
+
+
+
+
+
+/*
+
+//terminó el primer semestre y cofla no sabe si va a aprobar o no  pa lograrlo necesita:
+//contar con almenos 90% de asistemcia, promedio >7  y >75% de tareas entregadas.  Solicitar datos  y decirle si aprueba o no, mostra en consola con estilos 
+
+
+let materias = {
+    fisica: [90, 6, 3, "fisica"],
+    matematicas: [84, 8, 2, "matematicas"],
+    logica: [92, 8, 4, "logica"],
+    quimica: [96, 8, 4, "quimica"],
+    calculo: [91, 7, 3, "calculo"],
+    programas: [89, 8, 3, "programas"],
+    biologia: [85, 9, 3, "biologia"],
+    bbdd: [93, 8, 4, "bbdd"],
+    algebra: [94, 8, 4, "algebra"]
+}
+
+const asistemcia = () => {
+    for (materia in materias) {
+        let asistencias = materias[materia];
+        if (asistencias[0] >= 90) {
+            console.log(materias[materia][3]);
+            console.log("%c Asistencia aprobada", "color:green");
+
+        }else{
+            console.log(materias[materia][3]);
+            console.log("%c Asistencia reprobada", "color:red");
+        }
+    }
+
+}
+
+const promedio = () => {
+    for (materia in materias) {
+        let promedios = materias[materia];
+        if (promedios[1] >= 7) {
+            console.log(materias[materia][3]);
+            console.log("%c Promedio aprobado", "color:green");
+
+        }else{
+            console.log(materias[materia][3]);
+            console.log("%c Promedio reprobado", "color:red");
+        }
+    }
+
+}
+
+const trabajos = () => {
+    for (materia in materias) {
+        let tareas = materias[materia];
+        if (tareas[2] >= 3) {
+            console.log(materias[materia][3]);
+            console.log("%c Tareas aprobadas", "color:green");
+
+        }else{
+            console.log(materias[materia][3]);
+            console.log("%c Tareas reprobadas", "color:red");
+        }
+    }
+}
+
+asistemcia();
+promedio();
+trabajos();
+*/
+
+
+
+// cofla está organizando su semana 
+/*
+
+let trabajos = "240 minutos de trabajo";
+let estudio = "100 minutos de estudio";
+let tp = "30 minutos de trabajo practico";
+let homework = "20 minutos de tareas del hogar";
+let descanso = "15 minutos de descanso";
+
+console.log("Tareas");
+for (var i = 0; i < 14; i++) {
+    if (i == 0) {
+        console.group("Semana 1");
+
+    }
+    console.groupCollapsed("Dia " + (i + 1));
+    console.log(trabajos);
+    console.log(estudio);
+    console.log(tp);
+    console.log(homework);
+    console.log(descanso);
+    console.groupEnd();
+    if (i == 6) {
+        console.groupEnd();
+        console.group("Semana 2");
+    }
+
+}
+
+console.groupEnd();
+console.groupEnd();
+
+*/
+
+
+
+const titulo = document.querySelector(".titulo");
+titulo.setAttribute("contentEditable", "true");
