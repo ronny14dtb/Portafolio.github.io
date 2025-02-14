@@ -1,39 +1,26 @@
-// Función para crear corazones flotando
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (Math.random() * 1 + 2) + "s";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 4000);
-}
-
-// Generar corazones mientras carga
-setInterval(createHeart, 500);
-
 // Pantalla de carga
+// Ocultar pantalla de carga después de la animación
 setTimeout(() => {
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("main-content").style.display = "block";
-}, 5000);
-
-
+    clearInterval(heartInterval);
+}, 5000); // Tiempo de la animación de la tortuga
 
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.left = Math.random() * 70 + "vw";
     heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
     document.body.appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
     }, 4000);
+
+    const screenWidth = window.innerWidth;
+    const xPosition = Math.random() * screenWidth * 0.9; // Evita que se salga
+
 }
 
 setInterval(createHeart, 500);
@@ -43,9 +30,9 @@ function createFirework() {
     for (let i = 0; i < 10; i++) {
         const firework = document.createElement("div");
         firework.classList.add("firework");
-        firework.style.left = Math.random() * 100 + "vw";
-        firework.style.top = Math.random() * 50 + "vh";
-        firework.style.animationDuration = "1s";
+        firework.style.left = Math.random() * 90 + "vw";
+        firework.style.top = Math.random() * 90 + "vh";
+        firework.style.animationDuration = "3s";
         document.body.appendChild(firework);
 
         setTimeout(() => {
@@ -58,9 +45,9 @@ setInterval(createFirework, 2000);
 
 
 const video = document.getElementById("Mivideo");
-                        
+
 video.addEventListener("loadedmetadata", function () {
-  video.currentTime = 5; // Empieza desde el segundo 1
+    video.currentTime = 1.8; // Empieza desde el segundo 1
 });
 
 
@@ -121,41 +108,41 @@ window.onload = function () {
 let next = document.querySelector('.next')
 let prev = document.querySelector('.prev')
 
-next.addEventListener('click', function(){
+next.addEventListener('click', function () {
     let items = document.querySelectorAll('.item')
     document.querySelector('.slide').appendChild(items[0])
 })
 
-prev.addEventListener('click', function(){
+prev.addEventListener('click', function () {
     let items = document.querySelectorAll('.item')
     document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
 })
 
-$( document ).ready(function() {
-    
+$(document).ready(function () {
+
     var envelope = $('#envelope');
     var btn_open = $("#open");
     var btn_reset = $("#reset");
-    
-    envelope.click( function() {
+
+    envelope.click(function () {
         open();
     });
-    btn_open.click( function() {
+    btn_open.click(function () {
         open();
     });
-    btn_reset.click( function() {
+    btn_reset.click(function () {
         close();
     });
 
     function open() {
         envelope.addClass("open")
-           .removeClass("close");
+            .removeClass("close");
     }
     function close() {
         envelope.addClass("close")
-           .removeClass("open");
+            .removeClass("open");
     }
-   
+
 });
 
 // botones de avanzar y retroceder
@@ -186,22 +173,22 @@ function cambiarSeccion(direccion) {
 var nextBtn = document.querySelector('.next'),
     prevBtn = document.querySelector('.prev'),
     carousel = document.querySelector('.carousel'),
-    list = document.querySelector('.list'), 
+    list = document.querySelector('.list'),
     item = document.querySelectorAll('.item'),
-    runningTime = document.querySelector('.carousel .timeRunning') 
+    runningTime = document.querySelector('.carousel .timeRunning')
 
-let timeRunning = 3000 
+let timeRunning = 3000
 let timeAutoNext = 7000
 
-nextBtn.onclick = function(){
+nextBtn.onclick = function () {
     showSlider('next')
 }
 
-prevBtn.onclick = function(){
+prevBtn.onclick = function () {
     showSlider('prev')
 }
 
-let runTimeOut 
+let runTimeOut
 
 let runNextAuto = setTimeout(() => {
     nextBtn.click()
@@ -211,24 +198,24 @@ let runNextAuto = setTimeout(() => {
 function resetTimeAnimation() {
     runningTime.style.animation = 'none'
     runningTime.offsetHeight /* trigger reflow */
-    runningTime.style.animation = null 
+    runningTime.style.animation = null
     runningTime.style.animation = 'runningTime 7s linear 1 forwards'
 }
 
 
 function showSlider(type) {
     let sliderItemsDom = list.querySelectorAll('.carousel .list .item')
-    if(type === 'next'){
+    if (type === 'next') {
         list.appendChild(sliderItemsDom[0])
         carousel.classList.add('next')
-    } else{
+    } else {
         list.prepend(sliderItemsDom[sliderItemsDom.length - 1])
         carousel.classList.add('prev')
     }
 
     clearTimeout(runTimeOut)
 
-    runTimeOut = setTimeout( () => {
+    runTimeOut = setTimeout(() => {
         carousel.classList.remove('next')
         carousel.classList.remove('prev')
     }, timeRunning)

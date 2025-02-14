@@ -8,7 +8,7 @@ body {
     background: #c882d4;
     overflow: 10px hidden;
     max-width: 100%;
-    overflow-x: hidden;
+
 
 }
 
@@ -24,71 +24,120 @@ a:hover {
 
 /* Header section */
 /* Pantalla de carga */
+/* Pantalla de carga */
 #loading-screen {
     position: fixed;
     width: 100%;
-    height: 100vh;
-    background: #ffccdc;
+    height: 100%;
+    background: radial-gradient(circle at bottom, #001f3f, #000);
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+/* Fondo de estrellas */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/4/47/Starsinthesky.jpg');
+    background-size: cover;
+    animation: moveStars 10s linear infinite;
+}
+
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50px); }
+}
+
+/* Luna */
+.moon {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    transform: translateX(-50%);
 }
 
 /* Tortuga animada */
 .turtle {
-    font-size: 50px;
-    animation: moveTurtle 3s linear infinite;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveTurtle 6s ease-in-out forwards;
 }
 
-/* Animación de la tortuga */
+.turtle img {
+    width: 120px;
+    animation: flap 1s infinite alternate ease-in-out;
+}
+
+/* Movimiento de la tortuga */
 @keyframes moveTurtle {
-    0% { transform: translateX(-50px); }
-    50% { transform: translateX(50px); }
-    100% { transform: translateX(-50px); }
+    from { transform: translate(-50%, 100%); }
+    to { transform: translate(-50%, -60vh); }
 }
 
-/* Texto de carga */
+/* Aleteo de la tortuga */
+@keyframes flap {
+    from { transform: rotate(-10deg); }
+    to { transform: rotate(10deg); }
+}
+
 .loading-text {
-    font-size: 20px;
-    color: #d6336c;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 20%;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInOut 2s infinite alternate;
 }
 
+@keyframes fadeInOut {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+}
+
+
+/* Animación de corazones */
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    opacity: 0;
+    animation: floatHeart 3s linear forwards;
+}
+
+@keyframes floatHeart {
+    from { transform: translateY(0) scale(1); opacity: 1; }
+    to { transform: translateY(-100px) scale(1.5); opacity: 0; }
+}
 /* Corazones flotando */
-.heart {
-    position: fixed;
-    font-size: 20px;
-    color: red;
-    animation: float 4s linear infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(100vh) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-10vh) scale(0.5);
-        opacity: 0;
-    }
-}
-
 
 .heart {
     position: fixed;
     color: red;
     font-size: 20px;
-    animation: float 4s linear infinite;
+    animation: float 4s linear 4;
+    max-width: 90%;
+
 }
 
 @keyframes float {
     0% {
-        transform: translateY(100vh) scale(1);
+        transform: translateY(80vh) scale(1);
         opacity: 1;
     }
     100% {
-        transform: translateY(-10vh) scale(0.5);
+        transform: translateY(10vh) scale(0.5);
         opacity: 0;
     }
 }
@@ -96,11 +145,12 @@ a:hover {
 /* Fuegos artificiales */
 .firework {
     position: fixed;
-    width: 5px;
-    height: 5px;
+    width: 8px;
+    height: 8px;
     background: gold;
-    border-radius: 50%;
-    animation: explode 1s ease-out forwards;
+    border-radius: 30%;
+    animation: explode 6s ease-out forwards;
+    overflow: hidden;
 }
 
 @keyframes explode {
@@ -109,7 +159,7 @@ a:hover {
         opacity: 1;
     }
     100% {
-        transform: scale(3);
+        transform: scale(10);
         opacity: 0;
     }
 }
@@ -136,7 +186,7 @@ a:hover {
     display: flex;
     border-radius: 15px;
     overflow: hidden;
-    animation: fadeIn 9s ease-in-out 0s forwards;
+    animation: backwards 3s ease-in-out ;
 
     
     
@@ -168,6 +218,7 @@ a:hover {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    flex-grow: auto;
 }
 
 .card {
@@ -338,6 +389,9 @@ a:hover {
         width: 100%; /* Asegúrate de que las imágenes no se salgan */
         height: auto; /* Mantén las proporciones */
         border-radius: 20px;
+    }
+    body{
+        overflow-x: hidden;
     }
     
 
@@ -747,6 +801,9 @@ a:hover {
         padding-top: 30px;
     
         
+    }
+    body{
+        overflow-x: hidden;
     }
 }
 
