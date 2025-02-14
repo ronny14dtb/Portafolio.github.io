@@ -1,24 +1,42 @@
-const curso = require ("./My_Package/curso.json");
+const express = require('express');
+const mongoose = require('mongoose');
+const path = require('path'); // Importa path para manejar rutas correctamente
 
-    console.log(curso.title);
+const app = express();
 
+// Conectar a MongoDB
+mongoose.connect("mongodb://darkdtb:password@monguito:27017/miapp?authSource=admin")
+    .then(() => console.log("Conectado a MongoDB"))
+    .catch(err => console.error("Error al conectar a MongoDB:", err));
 
+// Definir esquema y modelo
+const animalSchema = new mongoose.Schema({
+    tipo: String,
+    estado: String
+});
+const Animal = mongoose.model("Animal", animalSchema);
 
-let infoCurso = {
-    "titulo": "Casas el cura",
-    "tema": "Pedro sanchez",
-    "odio": 445545,
-    "hijos": ["Bruno", "Manchas", "Jack"]
-}
+// Middleware para parsear JSON
+app.use(express.json());
 
-let infoCursoJSON = JSON.stringify(infoCurso);
+// Ruta para servir el archivo index.html
+app.get("/", (_req, res) => {
+    res.sendFile(path.join(__dirname, "Main.html"));
+});
 
-console.log(typeof infoCursoJSON);
-console.log(infoCursoJSON);
+// Ruta para listar animales
+app.get("/animales", async (_req, res) => {
+    console.log("Listando...");
+    const animales = await Animal.find();
+    return res.json(animales);
+});
 
+// Ruta para crear un animal
+app.post("/animales", async (req, res) => {
+    console.log("Creando...");
+    const nuevoAnimal = await Animal.create(req.body);
+    return res.json(nuevoAnimal);
+});
 
-let infoCurosObjeto = JSON.parse(infoCursoJSON);
-
-console.log(infoCurosObjeto);
-console.log(typeof infoCurosObjeto);
-console.log(infoCurosObjeto.titulo)
+// Iniciar servidor
+app.listen(3000, () => console.log("Servidor corriendo en http://localhost:3000"));

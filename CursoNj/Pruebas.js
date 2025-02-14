@@ -1,3 +1,28 @@
+/*function saludar (){
+    return "Hola ";
+}
+
+function saludarHolaMundo(){
+    return "Hola Mundo";
+}
+
+module.exports = {
+    saludar: saludar,
+    saludarHolaMundo: saludarHolaMundo
+} 
+
+/* Export en otro archivo del mismo directorio
+
+const saludos = require('./saludos.js'); //Importamos la función saludo
+
+console.log(saludos.saludar()); //Hola 
+console.log(saludos.saludarHolaMundo()); //Hola Mundo
+
+*/
+
+
+
+
 /*  Tipos de coonsole.log
 
 console.log("Holiwis desde Prueba2.js");
@@ -162,3 +187,22 @@ console.log(typeof infoCurosObjeto);
 console.log(infoCurosObjeto.titulo)
 
 */
+
+
+
+/**
+
+no sé que hace el events
+const eventEmitter = require("events");
+
+const emisorProductos = new eventEmitter();
+
+
+emisorProductos.on("compra", (total, numProductos) => {
+    console.log("Total de la comrpa " + total);
+    console.log("Numero de productos " + numProductos)
+});
+
+emisorProductos.emit("compra", 500 ,(Math.random()+10*3));      
+
+ */

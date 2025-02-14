@@ -1,3 +1,70 @@
+// Función para crear corazones flotando
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 1 + 2) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
+}
+
+// Generar corazones mientras carga
+setInterval(createHeart, 500);
+
+// Pantalla de carga
+setTimeout(() => {
+    document.getElementById("loading-screen").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+}, 5000);
+
+
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
+}
+
+setInterval(createHeart, 500);
+
+// Función para crear fuegos artificiales sutiles
+function createFirework() {
+    for (let i = 0; i < 10; i++) {
+        const firework = document.createElement("div");
+        firework.classList.add("firework");
+        firework.style.left = Math.random() * 100 + "vw";
+        firework.style.top = Math.random() * 50 + "vh";
+        firework.style.animationDuration = "1s";
+        document.body.appendChild(firework);
+
+        setTimeout(() => {
+            firework.remove();
+        }, 1000);
+    }
+}
+
+setInterval(createFirework, 2000);
+
+
+const video = document.getElementById("Mivideo");
+                        
+video.addEventListener("loadedmetadata", function () {
+  video.currentTime = 5; // Empieza desde el segundo 1
+});
+
+
+
 //cartas
 document.querySelectorAll('.card').forEach((card) => {
     card.addEventListener('click', function () {
