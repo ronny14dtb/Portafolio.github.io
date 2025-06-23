@@ -4,7 +4,7 @@ setTimeout(() => {
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("main-content").style.display = "block";
     clearInterval(heartInterval);
-}, 5000); // Tiempo de la animación de la tortuga
+}, 3000); // Tiempo de la animación de la tortuga
 
 function createHeart() {
     const heart = document.createElement("div");
